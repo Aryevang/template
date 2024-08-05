@@ -10,4 +10,5 @@ return {
   { import = "astrocommunity.colorscheme.nightfox-nvim"},
   { import = "astrocommunity.colorscheme.kanagawa-nvim" , lazy = true},
   { import = "astrocommunity.colorscheme.rose-pine", lazy = true },
+  { import = "astrocommunity.colorscheme.everforest", lazy = true },
 }
