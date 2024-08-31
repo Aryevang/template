@@ -16,7 +16,7 @@ return {
     config = function()
       local plg = require("everforest")
       plg.setup({
-        background = "medium",
+        background = "hard",
       })
     end
   },
