@@ -67,6 +67,7 @@ return {
         -- IMPORTANT: In this way you can create a new nested section.
         ["<leader>N"] = { name = " Personal commands" },
         ["<leader>Nn"] = { "<CMD>cd %:p:h<CR>", desc = "Move to open file directory" },
+        ["grr"] = {"<CMD>Telescope lsp_references<CR>", desc = "LSP Refereces"},
         -- ["<leader>Nn"] = { "<CMD>e C:/Users/User/.config/nvim/Notes/notes.md<CR>", desc = "Personal Notes" },
         -- ["<leader>Nj"] = { "<CMD>e C:/Users/User/.config/nvim/Notes/JobNotes.md<CR>", desc = "Job Notes" },
       },

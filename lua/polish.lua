@@ -16,6 +16,11 @@ vim.filetype.add {
   },
 }
 
+-- NOTE: Deletes not wanted key mappings
+-- =================================
+-- vim.keymap.del("n","<C-v>")
+-- =================================
+
 vim.keymap.set(
   "n",
   "<C-p>",
@@ -35,4 +40,4 @@ vim.keymap.set("n", "<C-n>", "<cmd>Neotree toggle<CR>")
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<CR>")
   --ToggleTerm
-vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm<cr>")
+vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm direction=float TermSelect=C:\\Users\\Arism\\scoop\\apps\\nu\\current\\nu.exe<cr>")
