@@ -10,7 +10,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "omnisharp",
-        "tsserver",
+        "ts_ls",
         "angularls",
         -- add more arguments for adding more language servers
       },
@@ -29,23 +29,6 @@ return {
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
-    -- require("mason-nvim-dap").setup({
-    --   ensure_installed = {"netcoredbg"},
-    --   automatic_installation = false,
-    --   handlers = {
-    --    function (config)
-    --       require("mason-nvim-dap").default_setup(config)
-    --    end,
-    --     cs = function (config)
-    --       config.adapters = {
-    --         type = "executable",
-    --         command = vim.fn.exepath("netcoredbg"),
-    --         args = { '--interpreter=vscode' }
-    --       }
-    --       require('mason-nvim-dap').default_setup(config) -- don't forget this!
-    --     end
-    --   }
-    -- })
     opts = {
       ensure_installed = {
         "netcoredbg",
