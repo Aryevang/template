@@ -63,12 +63,10 @@ return {
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
         -- IMPORTANT: In this way you can create a new nested section.
         ["<leader>N"] = { name = " Personal commands" },
         ["<leader>Nn"] = { "<CMD>cd %:p:h<CR>", desc = "Move to open file directory" },
-        ["grr"] = {"<CMD>Telescope lsp_references<CR>", desc = "LSP Refereces"},
+        -- ["grr"] = {"<CMD>Telescope lsp_references<CR>", desc = "LSP Refereces"},
         -- ["<leader>Nn"] = { "<CMD>e C:/Users/User/.config/nvim/Notes/notes.md<CR>", desc = "Personal Notes" },
         -- ["<leader>Nj"] = { "<CMD>e C:/Users/User/.config/nvim/Notes/JobNotes.md<CR>", desc = "Job Notes" },
       },
