@@ -10,7 +10,7 @@ return {
   { import = "astrocommunity.colorscheme.nightfox-nvim"},
   { import = "astrocommunity.colorscheme.kanagawa-nvim" , lazy = true},
   { import = "astrocommunity.colorscheme.rose-pine", lazy = true },
-  { 
+  {
 -- https://github.com/neanias/config/blob/main/nvim/lua/settings/plugins/everforest.lua
     import = "astrocommunity.colorscheme.everforest", lazy = true,
     config = function()
