@@ -21,6 +21,7 @@ return {
                   border = "curved",
                   winblend = 5,
                 },
+                shell = "nu"
               }
             end,
           },
