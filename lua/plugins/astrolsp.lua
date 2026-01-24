@@ -43,6 +43,20 @@ return {
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
+      roslyn = {
+        settings = {
+          ["csharp|inlay_hints"] = {
+            csharp_enable_inlay_hints_for_implicit_object_creatin = true,
+            csharp_enable_inlay_hints_for_implicit_variable_types = true
+          },
+          ["csharp|code_lens"] = {
+            dotnet_enable_references_code_lens = true
+          },
+          ["csharp|symbol_search"] = {
+            dotnet_search_reference_assemblies = true
+          }
+        }
+      }
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
     -- customize how language servers are attached

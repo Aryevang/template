@@ -2,6 +2,15 @@
 
 ---@type LazySpec
 return {
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      opts.registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+      }
+    end,
+  },
   -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
@@ -9,7 +18,8 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
-        "omnisharp",
+        -- "omnisharp",
+        "roslyn",
         "ts_ls",
         "angularls",
         -- add more arguments for adding more language servers
