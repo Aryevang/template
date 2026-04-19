@@ -7,7 +7,7 @@ return {
   opts = {},
   config = function()
     vim.lsp.config("roslyn", {
-      on_attach = function(client, bufnr) 
+      on_attach = function(client, bufnr)
         astrolsp.on_attach(client, bufnr)
       end,
     })

@@ -19,7 +19,7 @@ return {
       ensure_installed = {
         "lua_ls",
         -- "omnisharp",
-        "roslyn",
+        -- "roslyn",
         "ts_ls",
         "angularls",
         -- add more arguments for adding more language servers
