@@ -31,18 +31,19 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
+      -- Make sure to use the names found in `:Mason`
       ensure_installed = {
-        "prettier",
-        -- add more arguments for adding more null-ls sources
-      },
-    },
-  },
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    opts = {
-      ensure_installed = {
-        "netcoredbg",
-        -- add more arguments for adding more debuggers
+        -- install language servers
+        "lua-language-server",
+
+        -- install formatters
+        "stylua",
+
+        -- install debuggers
+        "debugpy",
+
+        -- install any other package
+        "tree-sitter-cli",
       },
     },
   },
