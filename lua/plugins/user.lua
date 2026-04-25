@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- PLEASE REMOVE THE EXAMPLES YOU HAVE NO INTEREST IN BEFORE ENABLING THIS FILE
 -- Here are some examples:
@@ -8,13 +6,6 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
 
   -- == Examples of Adding Plugins ==
-
-  "andweeb/presence.nvim",
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require("lsp_signature").setup() end,
-  },
 
   -- == Examples of Overriding Plugins ==
 
@@ -25,25 +16,21 @@ return {
       dashboard = {
         preset = {
           header = table.concat({
-            " █████  ███████ ████████ ██████   ██████ ",
-            "██   ██ ██         ██    ██   ██ ██    ██",
-            "███████ ███████    ██    ██████  ██    ██",
-            "██   ██      ██    ██    ██   ██ ██    ██",
-            "██   ██ ███████    ██    ██   ██  ██████ ",
-            "",
-            "███    ██ ██    ██ ██ ███    ███",
-            "████   ██ ██    ██ ██ ████  ████",
-            "██ ██  ██ ██    ██ ██ ██ ████ ██",
-            "██  ██ ██  ██  ██  ██ ██  ██  ██",
-            "██   ████   ████   ██ ██      ██",
+	      [[                                                                      ]],
+	      [[                                                                     ]],
+	      [[       ████ ██████           █████      ██                     ]],
+	      [[      ███████████             █████                             ]],
+	      [[      █████████ ███████████████████ ███   ███████████    ]],
+	      [[     █████████  ███    █████████████ █████ ██████████████   ]],
+	      [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+	      [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+	      [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+	      [[                                                                       ]],
           }, "\n"),
         },
       },
     },
   },
-
-  -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = false },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
@@ -57,7 +44,6 @@ return {
       require "astronvim.plugins.configs.luasnip"(plugin, opts)
     end,
   },
-
   {
     "windwp/nvim-autopairs",
     config = function(plugin, opts)
