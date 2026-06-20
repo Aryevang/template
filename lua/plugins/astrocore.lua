@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -45,6 +45,8 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        scrolloff = 14,
+        tabstop = 4,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -60,8 +62,13 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
-        ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        -- ["<C-p>"] = {
+        --   "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>",
+        -- },
+        -- ["<C-f>"] = { "<CMD>Telescope live_grep theme=ivy<CR>" },
+        ["<C-n>"] = { "<CMD>Neotree toggle<CR>" },
+        ["<Tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["<S-Tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
@@ -72,6 +79,19 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
+        ["<C-\\>"] = {
+          function()
+            require("toggleterm").setup {
+              open_mapping = [[<c-\>]],
+              direction = "float",
+              float_opts = {
+                border = "curved",
+                winblend = 5,
+              },
+              shell = "nu",
+            }
+          end,
+        },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -79,6 +99,11 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      t = {
+        -- NOTE: setting a mapping to false will disable it
+        -- ["<esc>"] = false,
+        -- ["<C-v"] = false
       },
     },
   },
