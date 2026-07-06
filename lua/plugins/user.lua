@@ -41,6 +41,9 @@ return {
         enabled = false,
       },
     },
+    words = {
+      enabled = false
+    }
   },
 
   -- You can disable default plugins as follows:

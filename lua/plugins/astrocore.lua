@@ -69,7 +69,35 @@ return {
         ["<C-n>"] = { "<CMD>Neotree toggle<CR>" },
         ["<Tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<S-Tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-
+        ["<C-p>"] = {
+          function()
+            require("snacks.picker").files {
+              layout = {
+                preset = "dropdown",
+                ---@diagnostic disable-next-line: assign-type-mismatch
+                preview = false,
+                width = 0.6, -- 60% of the editor width
+                height = 15, -- approximately 15 items
+                row = 0.5, -- center vertically
+                col = 0.5, -- center horizontally
+              },
+              exclude = { "node_modules" , "obj", "bin" },
+            }
+          end,
+          desc = "Find Files",
+        },
+        ["<C-f>"] = {
+          function()
+            require("snacks.picker").grep {
+              layout = {
+                preset = "dropdown",
+              },
+              exclude = { "node_modules" , "obj", "bin" },
+            }
+          end,
+          desc = "Live Grep",
+        },
+        -- },
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
